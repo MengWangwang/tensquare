@@ -6,6 +6,8 @@ import com.common.entity.StatusCode;
 import com.tensquare.base.pojo.Label;
 import com.tensquare.base.service.LabelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,15 +17,19 @@ import java.util.List;
 @RestController
 @CrossOrigin
 @RequestMapping("/label")
+@RefreshScope
 public class LabelController {
 
     @Autowired
     private LabelService labelService;
     @Autowired
     private HttpServletRequest request;
+    @Value("${ip}")
+    private String ip;
 
     @GetMapping
     public Result findAll(){
+        System.out.println("ip:"+ip);
         //获取头
         String header= request.getHeader("Authorization1");
         System.out.println("++++++++++++++:"+header);
