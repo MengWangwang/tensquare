@@ -7,7 +7,7 @@ spring:
     host: 127.0.0.1
 aliyun:
   sms:
-    accessKeyId: LTAIDGmRVFbTaLP5
-    accessKeySecret: YI6KrcTmV8bDd2vbF3ykhq905d5Lx1
-    template_code: SMS_169904790
-    sign_name: 十方世界
+    accessKeyId: XXXXXX
+    accessKeySecret: XXXXXX
+    template_code: XXXXXXX
+    sign_name: XXXXXXX
